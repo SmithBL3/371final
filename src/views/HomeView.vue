@@ -1,14 +1,8 @@
 <template>
   <div>
-    <p>Welcome. Please select an area on the map. <a
-        href="https://timezonedb.com">TimeZoneDB</a>.
-      Once you sign up and get your API key, save it in
-      <code>.env.local</code> (in the same directory with
-      <code>package.json</code>) in the following format:
+    <p>
 
-    <pre>
-        VUE_APP_TIMEZONE_API_KEY=xxxxxxxx
-    </pre>
+      371 Final Project
     </p>
 
     <div>
