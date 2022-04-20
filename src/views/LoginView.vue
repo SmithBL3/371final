@@ -154,6 +154,7 @@ export default class LoginView extends Vue {
   border: 1px solid black;
   padding: 0.5em;
   border-radius: 0.5em;
+  margin: auto;
 }
 
 section {

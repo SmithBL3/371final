@@ -1,7 +1,6 @@
 <template>
   <div>
     <p>
-
       371 Final Project
     </p>
 
@@ -9,7 +8,7 @@
     <input type="text" :value="geoPosition">
     
     <button @click="searchCity">Add</button>
-    <button @click="saveData">Save my Times!</button>
+    <button @click="logout">Logout</button>
      <button @click="deleteUser">Delete my Account...</button>
      
     
@@ -23,7 +22,7 @@
 // import ChildComponent from "./60-props-child.vue";
 import axios, { AxiosResponse } from "axios";
 //import {DocumentReference, CollectionReference,  addDoc, collection} from “firebase/firestore";
-import { getAuth, deleteUser } from "firebase/auth";
+import { getAuth, deleteUser, signOut } from "firebase/auth";
 import { Vue, Component } from "vue-property-decorator";
 import { ZoneRegion } from "@js-joda/core";
 
@@ -116,21 +115,11 @@ export default class Sample extends Vue {
 
 
  // Save Data Function
- saveData(): void {
-
-
+ logout(): void {
    const auth = getAuth();
-   const user = auth.currentUser?.uid;
-
-   // doc(firebaseProject, "users", user)
-
-
-
-   
-
-  // const mich: DocumentReference = doc(users, ‘states/MI’)
-  // updateDoc({ governor: “Someone Else” }) .then(() => {   console.debug(“Update successful”); })
-
+   const user = auth.currentUser;
+   signOut(auth)
+   this.$router.back();
  }
 
 
@@ -164,9 +153,9 @@ deleteUser(): void {
 
 
 <style scoped>
-#clocks {
+/* #clocks {
   margin-top: 1em;
-}
+} */
 pre {
   white-space: normal;
   padding: 0.5em;
