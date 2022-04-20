@@ -1,18 +1,24 @@
 <template>
   <div>
-    <p>
-      371 Final Project
-    </p>
+    <h1>
+      Romantic Restaurant Reviews
+    </h1>
 
-  
+    <nav>
+      <ul>
+        <li><a href="/test-One">About Us</a></li>
+        <li><a href="/test-Two">Restaurant List</a></li>
+        <li><a href="/test-Three">Reviews</a></li>
+      </ul>
+    </nav>
+
     <input type="text" :value="geoPosition">
     
     <button @click="searchCity">Add</button>
     <button @click="logout">Logout</button>
-     <button @click="deleteUser">Delete my Account...</button>
+    <button @click="deleteUser">Delete my Account...</button>
      
-    
-    <div id="clocks">
+    <div>
       
     </div>
   </div>
@@ -153,12 +159,45 @@ deleteUser(): void {
 
 
 <style scoped>
-/* #clocks {
-  margin-top: 1em;
-} */
+h1 {
+  text-align: center;
+  color: red;
+  font-size: 60px;
+  font-family:cursive;
+}
+
+nav {
+    height: 48px;
+    text-align: center;
+    background: #f7c1cb;
+}
+
+nav ul {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav li {
+    display: inline-block;
+    height: 100%;
+    width: 20%;
+}
+
+nav li a {
+    font-family: cursive;
+    color: #ff1e4b;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: #dd5771;
+}
+
 pre {
   white-space: normal;
   padding: 0.5em;
   border: 2px solid gray;
 }
+
 </style>

@@ -2,6 +2,10 @@ import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
 import LoginView from "../views/LoginView.vue";
+import testViewOne from "../views/TestOneView.vue";
+import testViewTwo from "../views/TestTwoView.vue";
+import testViewThree from "../views/TestThreeView.vue";
+
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
@@ -18,6 +22,33 @@ const routes: Array<RouteConfig> = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/HomeView.vue"),
+  },
+  { 
+    path: "/test-One",
+    name: "test-One",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/TestOneView.vue"),
+  },
+  { 
+    path: "/test-Two",
+    name: "test-Two",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/TestTwoView.vue"),
+  },
+  { 
+    path: "/test-Three",
+    name: "test-Three",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/TestThreeView.vue"),
   },
 ];
 
