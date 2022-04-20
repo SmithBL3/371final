@@ -1,23 +1,27 @@
-# 371project
+# firebase-login
 
 ## Project setup
-```
-npm install
-```
+
+1. Install packages
+    ```
+    yarn install
+    ```
+
+2. Copy your firebase configuration file into `src/myconfig.ts`
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+yarn serve
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+yarn build
 ```
 
 ### Lints and fixes files
 ```
-npm run lint
+yarn lint
 ```
 
 ### Customize configuration
