@@ -6,9 +6,9 @@
 
     <nav>
       <ul>
-        <li><a href="/test-One">About Us</a></li>
-        <li><a href="/test-Two">Restaurant List</a></li>
-        <li><a href="/test-Three">Reviews</a></li>
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/restaurant-list">Restaurant List</a></li>
+        <li><a href="/reviews">Reviews</a></li>
       </ul>
     </nav>
 
