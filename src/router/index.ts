@@ -2,9 +2,9 @@ import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
 import LoginView from "../views/LoginView.vue";
-import testViewOne from "../views/TestOneView.vue";
-import testViewTwo from "../views/TestTwoView.vue";
-import testViewThree from "../views/TestThreeView.vue";
+import testOneView from "../views/TestOneView.vue";
+import testTwoView from "../views/TestTwoView.vue";
+import testThreeView from "../views/TestThreeView.vue";
 
 Vue.use(VueRouter);
 

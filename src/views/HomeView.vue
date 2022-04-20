@@ -32,93 +32,8 @@ import { getAuth, deleteUser, signOut } from "firebase/auth";
 import { Vue, Component } from "vue-property-decorator";
 import { ZoneRegion } from "@js-joda/core";
 
-const timezoneDBUrl = "http://api.timezonedb.com/v2.1";
-type City = {
-  name: string;
-  timeZone: string;
-};
-
-type TimeZoneData = {
-  countryName: string;
-  gmtOffset: number;
-  regionName: string;
-  zoneName: string;
-};
 @Component
 export default class Sample extends Vue {
-  geoPos: { lat?: number; lng?: number } = {};
-  selectedCities: Array<City> = [];
-  //selectedLoctions: Array<Location> = [];
-  apiKey = "";
-  mounted(): void {
-    this.apiKey = process.env.VUE_APP_TIMEZONE_API_KEY;
-  }
-  get geoPosition(): string {
-    if (this.geoPos.lat && this.geoPos.lng)
-      return `${this.geoPos.lat.toPrecision(5)},${this.geoPos.lng.toPrecision(
-        5
-      )}`;
-    else return "N/A";
-  }
-  searchCity(): void {
-    const param = new URLSearchParams();
-    param.append("key", this.apiKey);
-    param.append("format", "json");
-    param.append("by", "position");
-    param.append("lat", this.geoPos.lat!.toString());
-    param.append("lng", this.geoPos.lng!.toString());
-    const tzUrl = `${timezoneDBUrl}/get-time-zone?` + param.toString();
-    // Use a Web Proxy Server to get around CORS issue
-    // since timezonedb.com does not allow CORS
-    axios
-      .request({
-        method: "GET",
-        url: "https://api.allorigins.win/get",
-        params: {
-          url: tzUrl,
-        },
-      })
-      .then((r: AxiosResponse) => {
-        return r.data;        
-      })
-      .then((r: any) => JSON.parse(r.contents))
-      .then((r: TimeZoneData) => {
-        // Add the selected location to our array
-  /* 
-         var temp ;
-         temp = this.selectedCities.find(r => r.name, r.regionName)
-         console.log(temp?.name)
-  */
-       
-         // let temp = this.selectedCities.find(r => r.name, r.regionName)
-         
-        if (this.selectedCities.findIndex(tempCity => tempCity.name == r.regionName)) {
-       // && this.selectedCities.find(r => r.timeZone)
-           this.selectedCities.push({ name: r.regionName, timeZone: r.zoneName });
-           
-
-        }
-
-      });
-  }
-
-  what(geoPos: { lat: number; lng: number }): void {
-    // When the user pans the map left/right the longitude
-    // angle can be out of the [-180,+180] range
-   
-
-   
-    while (geoPos.lng > 180) geoPos.lng -= 360;
-    while (geoPos.lng < -180) geoPos.lng += 360;
-    // If statement to check if region is the same?
-    this.geoPos = { ...geoPos };
-
-
-
-
-    
-  }
-
 
  // Save Data Function
  logout(): void {
@@ -127,9 +42,6 @@ export default class Sample extends Vue {
    signOut(auth)
    this.$router.back();
  }
-
-
-
 
  // DELETE USER FUNCTION
 deleteUser(): void {
@@ -148,15 +60,11 @@ deleteUser(): void {
   // ...
 });
   
-  
-
-  
   }}
   
 }
 
 </script>
-
 
 <style scoped>
 h1 {
@@ -167,7 +75,9 @@ h1 {
 }
 
 nav {
-    height: 48px;
+    /* height: 40px; */
+    margin-bottom: 10px;
+    margin-top: 10px;
     text-align: center;
     background: #f7c1cb;
 }
