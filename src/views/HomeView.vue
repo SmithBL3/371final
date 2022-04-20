@@ -5,9 +5,7 @@
       371 Final Project
     </p>
 
-    <div>
-      <WorldMap @map-clicked="what" />
-    </div>
+  
     <input type="text" :value="geoPosition">
     
     <button @click="searchCity">Add</button>
@@ -17,9 +15,6 @@
     
     <div id="clocks">
       
-      <Clock v-for="(c,pos) in selectedCities" :key="pos"
-        :time-zone="c.timeZone" :label="c.name">
-      </Clock>
     </div>
   </div>
 </template>
