@@ -24,8 +24,6 @@
 import axios, { AxiosResponse } from "axios";
 //import {DocumentReference, CollectionReference,  addDoc, collection} from “firebase/firestore";
 import { getAuth, deleteUser } from "firebase/auth";
-import Clock from "./70-clock.vue";
-import WorldMap from "./70-world-map.vue";
 import { Vue, Component } from "vue-property-decorator";
 import { ZoneRegion } from "@js-joda/core";
 
@@ -41,7 +39,7 @@ type TimeZoneData = {
   regionName: string;
   zoneName: string;
 };
-@Component({ components: { Clock, WorldMap } })
+@Component
 export default class Sample extends Vue {
   geoPos: { lat?: number; lng?: number } = {};
   selectedCities: Array<City> = [];
@@ -82,7 +80,7 @@ export default class Sample extends Vue {
       .then((r: TimeZoneData) => {
         // Add the selected location to our array
   /* 
-         var temp;
+         var temp ;
          temp = this.selectedCities.find(r => r.name, r.regionName)
          console.log(temp?.name)
   */
