@@ -169,11 +169,15 @@ h2 {
 #loginpanel {
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
-  border: 2px solid rgb(227, 196, 196);
-  padding: 0.5em;
+  align-items: center;
+  border: 2px solid rgb(255, 150, 150);
+  padding: 1.5em;
+  background-color: rgb(255, 241, 241);
   border-radius: 0.5em;
-  margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10%);
 }
 
 section {
