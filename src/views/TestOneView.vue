@@ -23,7 +23,9 @@
     <button @click="deleteUser">Delete my Account...</button>
      
     <div>
-      
+      <p>
+        <i>Romantic Restaurant Reviews</i> is a web application designed to educate users of nearby restaurants that provide a romantic ambiance.
+      </p>
     </div>
   </div>
 </template>
@@ -76,6 +78,11 @@ h1 {
   color: red;
   font-size: 60px;
   font-family:cursive;
+}
+
+h2 {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
 }
 
 nav {

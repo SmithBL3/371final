@@ -24,8 +24,8 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "about" */ "../views/HomeView.vue"),
   },
   { 
-    path: "/test-One",
-    name: "test-One",
+    path: "/about-us",
+    name: "about-us",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -33,8 +33,8 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "about" */ "../views/TestOneView.vue"),
   },
   { 
-    path: "/test-Two",
-    name: "test-Two",
+    path: "/restaurant-list",
+    name: "restaurant-list",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -42,8 +42,8 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "about" */ "../views/TestTwoView.vue"),
   },
   { 
-    path: "/test-Three",
-    name: "test-Three",
+    path: "/reviews",
+    name: "reviews",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

@@ -5,7 +5,7 @@
     </h1>
 
     <h2>
-      Restaurant Reviews
+      Restaurant List
     </h2>
 
     <nav>
