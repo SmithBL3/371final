@@ -4,6 +4,10 @@
       Romantic Restaurant Reviews
     </h1>
 
+    <h2>
+      About Us
+    </h2>
+
     <nav>
       <ul>
         <li><a href="/about-us">About Us</a></li>

@@ -4,6 +4,10 @@
       Romantic Restaurant Reviews
     </h1>
 
+    <h2>
+      Reviews
+    </h2>
+
     <nav>
       <ul>
         <li><a href="/about-us">About Us</a></li>
@@ -72,6 +76,11 @@ h1 {
   color: red;
   font-size: 60px;
   font-family:cursive;
+}
+
+h2 {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
 }
 
 nav {

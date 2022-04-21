@@ -1,5 +1,11 @@
 <template>
   <div>
+    <h1>
+      Romantic Restaurant Reviews
+    </h1>
+    <h2>
+      Login
+    </h2>
     <section>
       <div id="loginpanel">
         <input type="text" v-model="u_email"
@@ -147,11 +153,24 @@ export default class LoginView extends Vue {
 }
 </script> -->
 <style scoped>
+
+h1 {
+  text-align: center;
+  color: red;
+  font-size: 60px;
+  font-family:cursive;
+}
+
+h2 {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
 #loginpanel {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid black;
+  border: 2px solid rgb(227, 196, 196);
   padding: 0.5em;
   border-radius: 0.5em;
   margin: auto;
