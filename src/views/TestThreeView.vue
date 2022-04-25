@@ -16,15 +16,63 @@
       </ul>
     </nav>
 
-    <input type="text" :value="geoPosition">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Restaurant</th>
+        <th>Review</th>
+        <th>Stars</th>
+      </tr>
+      <tr>
+        <td>KristenA</td>
+        <td>Giornio's</td>
+        <td>Wonderful ambiance! Good for a great night out.</td>
+        <td>5 out of 5</td>
+      </tr>
+      <tr>
+        <td>KailaJ</td>
+        <td>The Watering Hole</td>
+        <td>The food was really good, but the staff were a little rude.</td>
+        <td>3 out of 5</td>
+      </tr>
+      <tr>
+        <td>PattiC</td>
+        <td>Cafe Espresso</td>
+        <td>A go to spot to chill by the fire.</td>
+        <td>4 out of 5</td>
+      </tr>
+      <tr>
+        <td>LillyT</td>
+        <td>McDonald's</td>
+        <td>Not the epitome of fine dining.</td>
+        <td>1 out of 5</td>
+      </tr>
+      <tr>
+        <td>JuddL</td>
+        <td>Pizza Palace</td>
+        <td>Amazing place for a bite after a fun night on the town.</td>
+        <td>5 out of 5</td>
+      </tr>
+    </table>
     
-    <button @click="searchCity">Add</button>
-    <button @click="logout">Logout</button>
+    <br>
+
+    <span>Name:</span> &nbsp;
+    <input type="text" :value="Name">
+    <br>
+    <span>Restaurant:</span> &nbsp;
+    <input type="text" :value="Restaurant">
+    <br>
+    <span>Review:</span> &nbsp;
+    <input type="text" :value="Review">
+    <br>
+    <span>Stars:</span> &nbsp;
+    <input type="number" :value="Stars">
+    
+    <br><br>
+    <button @click="addReview">Add Review</button> &nbsp;
+    <button @click="logout">Logout</button> &nbsp;
     <button @click="deleteUser">Delete my Account...</button>
-     
-    <div>
-      
-    </div>
   </div>
 </template>
 
@@ -119,4 +167,10 @@ pre {
   border: 2px solid gray;
 }
 
+th {
+  border: 1px solid;
+}
+tr :nth-child(even) {
+  background-color: #f1b0bd;
+}
 </style>
