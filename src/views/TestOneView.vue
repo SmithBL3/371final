@@ -23,8 +23,11 @@
     <button @click="deleteUser">Delete my Account...</button>
      
     <div>
+      <h3>Our Mission Statement</h3>
+      <p><i>Romantic Restaurant Reviews</i> helps couples find romantic spots to dine.</p>
+      <h3>The Purpose</h3>
       <p>
-        <i>Romantic Restaurant Reviews</i> is a web application designed to educate users of nearby restaurants that provide a romantic ambiance.
+        <i>Romantic Restaurant Reviews</i> is a web application designed to educate users of nearby restaurants that provide a romantic ambiance. We have collected data from local restaurant reviews, and have selected the top restaurants based on qualities such as lighting, food, decor, and more.
       </p>
     </div>
   </div>
