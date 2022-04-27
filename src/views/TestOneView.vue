@@ -88,6 +88,11 @@ h2 {
   text-align: center;
 }
 
+p {
+    background-color:rgb(235, 212, 232);
+
+}
+
 nav {
     /* height: 40px; */
     margin-bottom: 10px;
